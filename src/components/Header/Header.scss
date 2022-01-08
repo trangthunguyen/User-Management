@@ -1,0 +1,91 @@
+@import "/src/assets/scss/color";
+
+.header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  text-align: center;
+  color: $color-white;
+}
+
+.header-brand {
+  width: 230px;
+  background-color: $color-header-brand;
+  font-size: 22px;
+  padding: 11px 0;
+}
+
+.header-menu {
+  width: calc(100% - 230px);
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-header-menu;
+}
+
+.header-menu-icon {
+  padding: 15px 10px;
+}
+
+.header-menu-choice {
+  margin-right: 2%;
+  display: flex;
+  align-items: center;
+  .choice-notification {
+    margin: 10px 30px 0 0;
+    position: relative;
+    .notification-quantity {
+      font-weight: bold;
+      padding: 0 3px;
+      border-radius: 15%;
+      font-size: 9px;
+      position: absolute;
+      top: -8px;
+      right: -8px;
+    }
+
+    .notification-quantity-green {
+      background-color: $color-green;
+    }
+    .notification-quantity-orange {
+      background-color: $color-orange;
+    }
+    .notification-quantity-red {
+      background-color: $color-red;
+    }
+  }
+
+  .choice-profile {
+    margin-right: 15px;
+    font-size: 14px;
+    display: flex;
+    .profile-picture {
+      display: block;
+      margin-top: 4px;
+      img {
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+      }
+    }
+    .profile-name {
+      margin: 5px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: block;
+    height: 100px;
+  }
+  .header-brand,
+  .header-menu {
+    width: 100%;
+  }
+  .header-menu-choice {
+    margin-bottom: 10px;
+  }
+  .profile-name {
+    display: none;
+  }
+}

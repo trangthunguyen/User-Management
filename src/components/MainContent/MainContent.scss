@@ -1,0 +1,168 @@
+@import "../../assets/scss/color";
+
+html {
+  --antd-wave-shadow-color: transparent !important;
+  --scroll-bar: 0;
+}
+
+.main-content {
+  width: 100%;
+  background-color: $color-white;
+  padding: 0px 12px 15px 12px;
+  border-radius: 3px;
+  border-top: solid 3px $color-lighter;
+  .main-content-header {
+    margin: 10px 0;
+  }
+}
+
+.wrap-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.btn {
+  float: right;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  table-layout: auto;
+  font-size: 13px;
+  tr,
+  th,
+  td {
+    margin-left: 10px;
+    height: 35px;
+    border: solid 1px $color-border;
+    padding: 0 10px;
+  }
+
+  th {
+    position: relative;
+    border-bottom: solid 3px $color-border;
+  }
+  .th-title {
+    margin-right: 20px;
+  }
+  .th-sort {
+    position: absolute;
+    right: 10px;
+    color: $color-light;
+    font-size: 16px;
+  }
+}
+
+.option-icon {
+  font-size: 25px;
+}
+
+.delete {
+  margin-left: 20px;
+}
+
+.table-foot {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  .table-infor {
+    font-size: 14px;
+  }
+  .ant-pagination-prev {
+    margin: 0;
+  }
+  .ant-pagination-prev .ant-pagination-item-link,
+  .ant-pagination-next .ant-pagination-item-link {
+    border-radius: 0;
+  }
+  .ant-pagination-item {
+    margin: 0;
+    border-radius: 0;
+    background-color: $color-button-pagination;
+    &:hover {
+      border: 1px solid $color-border-pagination-action;
+      background-color: $color-table-hover;
+    }
+    &-active,
+    &:focus {
+      background-color: $color-pagination-item-focus;
+      border-color: $color-pagination-item-focus;
+    }
+    & a:hover {
+      color: $color-black;
+    }
+    &-active a,
+    &-active a:hover,
+    & a:focus {
+      color: $color-white;
+    }
+  }
+}
+
+.ant-pagination-prev button {
+  background-color: $color-button-pagination;
+  border-radius: 4px 0 0 4px;
+}
+
+.ant-pagination-next button {
+  background-color: $color-button-pagination;
+  border-radius: 0 4px 4px 0;
+}
+
+.ant-pagination .ant-pagination-prev:hover button,
+.ant-pagination .ant-pagination-next:hover button {
+  border: 1px solid $color-border-pagination-action;
+}
+
+.ant-pagination-prev button:hover,
+.ant-pagination-prev button:focus,
+.ant-pagination-prev button:active,
+.ant-pagination-next button:hover,
+.ant-pagination-next button:focus,
+.ant-pagination-next button:active {
+  color: $color-black;
+  border: 1px solid $color-border-pagination-action;
+  background-color: $color-table-hover;
+}
+
+.ant-btn {
+  & span:hover,
+  & span:focus {
+    color: $color-black;
+    border-color: $color-border-pagination-action;
+  }
+}
+
+.btn-form {
+  float: right;
+  &-foot {
+    margin: 0 5px;
+  }
+}
+
+.row:hover {
+  background-color: $color-table-hover;
+}
+
+.option-icon:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .table-foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .table-infor {
+      margin-bottom: 20px;
+    }
+  }
+  .delete {
+    margin-left: 0;
+  }
+}

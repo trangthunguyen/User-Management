@@ -1,0 +1,50 @@
+@import "../../assets/scss/color";
+
+.header-content {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Source Sans Pro", sans-serif;
+  .title {
+    &-bold {
+      font-size: 24px;
+    }
+    &-light {
+      margin-left: 10px;
+    }
+  }
+
+  .path {
+    font-size: 12px;
+    .sub-path {
+      margin: 0 5px;
+    }
+    &-icon {
+      font-size: 14px;
+      margin-right: -2px;
+      color: $color-path-text;
+    }
+    &-text {
+      color: $color-path-text;
+    }
+    &-light {
+      color: $color-path-light;
+    }
+  }
+
+  .light {
+    color: $color-light;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+  }
+  .path {
+    margin-top: 15px;
+    padding: 5px 0;
+    background-color: #d2d6de;
+  }
+}

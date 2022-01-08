@@ -1,0 +1,49 @@
+@import "../../assets/scss/color";
+
+.menu {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  margin-bottom: 0;
+
+  .left-menu {
+    display: flex;
+    color: $color-nav-text;
+    span {
+      text-indent: 0;
+    }
+    .left-menu-text {
+      text-indent: 15px;
+    }
+    .icon-round {
+      width: 12px;
+      height: 12px;
+      border-radius: 100%;
+      border: solid 2px;
+      margin: 5px 0 0 0;
+      display: block;
+    }
+    .color-red {
+      border-color: $color-red;
+    }
+    .color-orange {
+      border-color: $color-orange;
+    }
+    .color-blue {
+      border-color: $color-blue;
+    }
+  }
+  .right-menu {
+    margin-right: 15px;
+    &-icon {
+      color: $color-nav-text;
+    }
+  }
+}
+
+.menu:hover {
+  background-color: $color-menu-hover;
+  color: $color-white;
+  cursor: pointer;
+}
